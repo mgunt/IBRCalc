@@ -1,2 +1,2 @@
 # IBRCalc
-A calculator that calculates eligibility for income driven federal student loan repayment plans
+A simple calculator that calculates estimated monthly payments for federal student loans
