@@ -15,7 +15,7 @@ public class IBRCalc
 		double discretionaryIncome;
 		double payment;
 		double povertylevel = 11880;
-		double extraPerson = 3920;
+		double extraPerson = 4010;
 		Scanner input = new Scanner(System.in); // creates variable that reads text from the terminal
 		do{
 			System.out.println("");
