@@ -30,9 +30,21 @@ public class IBRCalc
 				case "1":
 					System.out.println("You have selected: Income Based Repayment");
 					System.out.println("What is your adjusted gross income? (Do not use commas)");
-					AGI = input.nextDouble();
+					try{
+						AGI = input.nextDouble();
+					}
+					catch (InputMismatchException e){
+						System.out.println("You entered invalid input. Please try again.");
+						break;
+					}
 					System.out.println("What is your family size? (Use whole numbers)");
-					familySize = input.nextDouble();
+					try{
+						familySize = input.nextDouble();
+					}
+					catch (InputMismatchException e){
+						System.out.println("You entered invalid input. Please try again.");
+						break;
+					}
 					discretionaryIncome = (AGI - 1.5*(povertylevel + (extraPerson * (familySize-1))));
 					if (discretionaryIncome < 0){
 						discretionaryIncome = 0; // this corrects an error showing a negative number when a person's discretionary income is less than 150% of the poverty line
@@ -43,9 +55,21 @@ public class IBRCalc
 				case "2":
 					System.out.println("You have selected: Pay as You Earn");
 					System.out.println("What is your adjusted gross income? (Do not use commas)");
-					AGI = input.nextDouble();
+					try{
+						AGI = input.nextDouble();
+					}
+					catch (InputMismatchException e){
+						System.out.println("You entered invalid input. Please try again.");
+						break;
+					}
 					System.out.println("What is your family size?");
-					familySize = input.nextDouble();
+					try{
+						familySize = input.nextDouble();
+					}
+					catch (InputMismatchException e){
+						System.out.println("You entered invalid input. Please try again.");
+						break;
+					}
 					discretionaryIncome = (AGI - 1.5*(povertylevel + (extraPerson * (familySize-1))));
 					if (discretionaryIncome < 0){
 						discretionaryIncome = 0; // this corrects an error showing a negative number when a person's discretionary income is less than 150% of the poverty line
@@ -56,9 +80,21 @@ public class IBRCalc
 				case "3":
 					System.out.println("You have selected: Income Contingent Repayment");
 					System.out.println("What is your adjusted gross income? (Do not use commas)");
-					AGI = input.nextDouble();
+					try{
+						AGI = input.nextDouble();
+					}
+					catch (InputMismatchException e){
+						System.out.println("You entered invalid input. Please try again.");
+						break;
+					}
 					System.out.println("What is your family size? (Use whole numbers)");
-					familySize = input.nextDouble();
+					try{
+						familySize = input.nextDouble();
+					}
+					catch (InputMismatchException e){
+						System.out.println("You entered invalid input. Please try again.");
+						break;
+					}
 					discretionaryIncome = (AGI - 1.5*(povertylevel + (extraPerson * (familySize-1))));
 					if (discretionaryIncome < 0){
 						discretionaryIncome = 0; // this corrects an error showing a negative number when a person's discretionary income is less than 150% of the poverty line
