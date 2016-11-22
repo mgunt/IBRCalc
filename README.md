@@ -1,7 +1,7 @@
 # IBRCalc
 A simple program that calculates estimated monthly payments for income driven repayment plans.
 
-## Compile and run the program
+## How To Compile and Run
 simply compile in the terminal
 ```
 javac IBRCalc.java
