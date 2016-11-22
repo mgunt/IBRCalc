@@ -29,31 +29,40 @@ public class IBRCalc
 			switch(choice){
 				case "1":
 					System.out.println("You have selected: Income Based Repayment");
-					System.out.println("What is your adjusted gross income?");
+					System.out.println("What is your adjusted gross income? (Do not use commas)");
 					AGI = input.nextDouble();
 					System.out.println("What is your family size? (Use whole numbers)");
 					familySize = input.nextDouble();
 					discretionaryIncome = (AGI - 1.5*(povertylevel + (extraPerson * (familySize-1))));
+					if (discretionaryIncome < 0){
+						discretionaryIncome = 0; // this corrects an error showing a negative number when a person's discretionary income is less than 150% of the poverty line
+					}
 					payment = discretionaryIncome / 12 * .15;
 					System.out.println("Your estimated IBR payment would be: " + String.format( "$%.2f", payment ));
 					break;
 				case "2":
 					System.out.println("You have selected: Pay as You Earn");
-					System.out.println("What is your adjusted gross income?");
+					System.out.println("What is your adjusted gross income? (Do not use commas)");
 					AGI = input.nextDouble();
 					System.out.println("What is your family size?");
 					familySize = input.nextDouble();
 					discretionaryIncome = (AGI - 1.5*(povertylevel + (extraPerson * (familySize-1))));
+					if (discretionaryIncome < 0){
+						discretionaryIncome = 0; // this corrects an error showing a negative number when a person's discretionary income is less than 150% of the poverty line
+					}
 					payment = discretionaryIncome / 12 * .1;
 					System.out.println("Your estimated PAYE payment would be: " + String.format( "$%.2f", payment ));
 					break;
 				case "3":
 					System.out.println("You have selected: Income Contingent Repayment");
-					System.out.println("What is your adjusted gross income?");
+					System.out.println("What is your adjusted gross income? (Do not use commas)");
 					AGI = input.nextDouble();
 					System.out.println("What is your family size? (Use whole numbers)");
 					familySize = input.nextDouble();
 					discretionaryIncome = (AGI - 1.5*(povertylevel + (extraPerson * (familySize-1))));
+					if (discretionaryIncome < 0){
+						discretionaryIncome = 0; // this corrects an error showing a negative number when a person's discretionary income is less than 150% of the poverty line
+					}
 					payment = discretionaryIncome / 12 * .2;
 					System.out.println("Your estimated ICR payment would be: " + String.format( "$%.2f", payment ));
 					break;
